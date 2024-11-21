@@ -1,6 +1,9 @@
 #include "Engine.h"
+#include "Utility.h"
 #include <stdlib.h>
 #include <memory.h>
+#include <vector>
+#include <algorithm>
 
 //
 //  You are free to modify this file
@@ -19,6 +22,8 @@
 // initialize game data in this function
 void initialize()
 {
+    std::vector<GameObject> objectList;
+    
 }
 
 // this function is called to update game data,
