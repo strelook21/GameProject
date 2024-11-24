@@ -203,9 +203,9 @@ bool SpritedObject::CollisionCheck(const GameObject& other) {
 		const double rY = other.Y() - other.OffsetY();
 		const double radius = Collider()->Radius();
 		const double width = other.Collider()->Width();
-		const double heihgt = other.Collider()->Height();
+		const double height = other.Collider()->Height();
 		double closest_x = std::max(rX, std::min (x, rX + width));
-		double closest_y = std::max(rY, std::min (y, rY + width));
+		double closest_y = std::max(rY, std::min (y, rY + height));
 		double distance2 = (x - closest_x) * (x - closest_x) + (y - closest_y) * (y - closest_y);
 		return distance2 <= radius * radius;
 	}
@@ -217,9 +217,9 @@ bool SpritedObject::CollisionCheck(const GameObject& other) {
 		const double rY = Y() - OffsetY();
 		const double radius = other.Collider()->Radius();
 		const double width = Collider()->Width();
-		const double heihgt = Collider()->Height();
+		const double height = Collider()->Height();
 		double closest_x = std::max(rX, std::min(x, rX + width));
-		double closest_y = std::max(rY, std::min(y, rY + width));
+		double closest_y = std::max(rY, std::min(y, rY + height));
 		double distance2 = (x - closest_x) * (x - closest_x) + (y - closest_y) * (y - closest_y);
 		return distance2 <= radius * radius;
 	}
